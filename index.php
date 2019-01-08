@@ -5,7 +5,7 @@ require "library/database.php";
 if(isset($_GET["controller"])){
     switch($_GET["controller"]){
         case "admin":
-        require "controllers/admin/controller.php";
+        require "controllers/admin/controller.php"; 
         break;
     }
 }else{
