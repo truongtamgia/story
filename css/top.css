@@ -1,0 +1,356 @@
+.xemthem {
+  text-align: center;
+  width: 100%;
+  padding: 10px 0 10px; }
+  .xemthem div {
+    display: inline-block;
+    position: relative; }
+    .xemthem div a {
+      display: inline-block;
+      text-decoration: none;
+      font: Normal 15px "Anton";
+      color: #87f1ef;
+      line-height: 32px;
+      background: #838383;
+      border-radius: 20px;
+      width: 250px;
+      border: 4px solid #87f1ef;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s; }
+    .xemthem div i {
+      color: #87f1ef;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      right: 18%;
+      -webkit-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s; }
+    .xemthem div:hover a {
+      background: #000; }
+    .xemthem div:hover i {
+      right: 3%; }
+
+.main {
+  width: 100%; }
+  .main .banner {
+    width: 100%; }
+    .main .banner img {
+      width: 100%; }
+  .main .noibat {
+    margin: -200px 0 0;
+    background: #fff; }
+    @media only screen and (max-width: 767px) and (min-width: 425px) {
+      .main .noibat {
+        margin: 0; } }
+    @media only screen and (max-width: 424px) and (min-width: 375px) {
+      .main .noibat {
+        margin: 0; } }
+    @media only screen and (max-width: 374px) and (min-width: 320px) {
+      .main .noibat {
+        margin: 0; } }
+    .main .noibat .fbox {
+      position: relative;
+      z-index: 10;
+      width: 800px;
+      margin: auto;
+      background: #fff;
+      border-radius: 25px;
+      padding: 0 25px 40px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
+      @media only screen and (max-width: 1200px) and (min-width: 1024px) {
+        .main .noibat .fbox {
+          width: 700px;
+          padding: 0 15px 40px; } }
+      @media only screen and (max-width: 1023px) and (min-width: 768px) {
+        .main .noibat .fbox {
+          width: 600px;
+          padding: 0 10px 0px; } }
+      @media only screen and (max-width: 767px) and (min-width: 425px) {
+        .main .noibat .fbox {
+          padding: 0 10px 0px;
+          width: 100%; } }
+      @media only screen and (max-width: 424px) and (min-width: 375px) {
+        .main .noibat .fbox {
+          padding: 0 10px 0px;
+          width: 100%; } }
+      @media only screen and (max-width: 374px) and (min-width: 320px) {
+        .main .noibat .fbox {
+          padding: 0 10px 0px;
+          width: 100%; } }
+      .main .noibat .fbox h3 {
+        font: Normal 50px "Anton";
+        color: #1a84b4;
+        text-align: center;
+        padding: 30px 0 30px;
+        display: block;
+        width: 100%;
+        text-transform: uppercase; }
+        @media only screen and (max-width: 1200px) and (min-width: 1024px) {
+          .main .noibat .fbox h3 {
+            font-size: 40px;
+            padding: 25px 0 25px; } }
+        @media only screen and (max-width: 1023px) and (min-width: 768px) {
+          .main .noibat .fbox h3 {
+            font-size: 35px;
+            padding: 25px 0 25px; } }
+        @media only screen and (max-width: 767px) and (min-width: 425px) {
+          .main .noibat .fbox h3 {
+            font-size: 25px;
+            padding: 20px 0; } }
+        @media only screen and (max-width: 424px) and (min-width: 375px) {
+          .main .noibat .fbox h3 {
+            font-size: 25px;
+            padding: 15px 0; } }
+        @media only screen and (max-width: 374px) and (min-width: 320px) {
+          .main .noibat .fbox h3 {
+            font-size: 20px;
+            padding: 15px 0; } }
+      .main .noibat .fbox .item {
+        width: 32%; }
+        .main .noibat .fbox .item a {
+          display: inline-block;
+          width: 100%;
+          text-decoration: none; }
+          .main .noibat .fbox .item a:hover .img img {
+            -webkit-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            transform: scale(1.2);
+            -webkit-filter: brightness(40%);
+            filter: brightness(40%); }
+          .main .noibat .fbox .item a .img {
+            border: 3px solid #ffd70b;
+            overflow: hidden; }
+            .main .noibat .fbox .item a .img img {
+              width: 100%;
+              height: 350px;
+              -o-object-fit: cover;
+              object-fit: cover;
+              -webkit-transition: 1s;
+              -o-transition: 1s;
+              transition: 1s; }
+              @media only screen and (max-width: 1200px) and (min-width: 1024px) {
+                .main .noibat .fbox .item a .img img {
+                  height: 300px; } }
+              @media only screen and (max-width: 1023px) and (min-width: 768px) {
+                .main .noibat .fbox .item a .img img {
+                  height: 250px; } }
+              @media only screen and (max-width: 767px) and (min-width: 425px) {
+                .main .noibat .fbox .item a .img img {
+                  height: 160px; } }
+              @media only screen and (max-width: 424px) and (min-width: 375px) {
+                .main .noibat .fbox .item a .img img {
+                  height: 150px; } }
+              @media only screen and (max-width: 374px) and (min-width: 320px) {
+                .main .noibat .fbox .item a .img img {
+                  height: 130px; } }
+          .main .noibat .fbox .item a p.tit {
+            font: normal 16px "Oswald";
+            text-align: center;
+            color: #1a84b4;
+            padding: 20px 10px 0; }
+            @media only screen and (max-width: 1200px) and (min-width: 1024px) {
+              .main .noibat .fbox .item a p.tit {
+                padding: 10px 10px 0; } }
+            @media only screen and (max-width: 767px) and (min-width: 425px) {
+              .main .noibat .fbox .item a p.tit {
+                font-size: 13px;
+                padding: 10px 10px 0; } }
+            @media only screen and (max-width: 424px) and (min-width: 375px) {
+              .main .noibat .fbox .item a p.tit {
+                font-size: 13px;
+                padding: 10px 10px 0; } }
+            @media only screen and (max-width: 374px) and (min-width: 320px) {
+              .main .noibat .fbox .item a p.tit {
+                font-size: 13px;
+                padding: 10px 10px 0; } }
+    .main .noibat .xemthem {
+      text-align: center;
+      width: 100%;
+      padding: 40px 0 10px; }
+      @media only screen and (max-width: 425px) {
+        .main .noibat .xemthem {
+          padding: 20px 0 0; } }
+      .main .noibat .xemthem div {
+        display: inline-block;
+        position: relative; }
+        @media only screen and (max-width: 768px) {
+          .main .noibat .xemthem div {
+            width: 70%; } }
+        @media only screen and (max-width: 425px) {
+          .main .noibat .xemthem div {
+            width: 90%; } }
+        .main .noibat .xemthem div a {
+          display: inline-block;
+          text-decoration: none;
+          font: Normal 15px "Anton";
+          color: #87f1ef;
+          line-height: 32px;
+          background: #838383;
+          border-radius: 20px;
+          width: 450px;
+          border: 4px solid #87f1ef;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          -webkit-transition: all 0.5s;
+          -o-transition: all 0.5s;
+          transition: all 0.5s; }
+          @media only screen and (max-width: 768px) {
+            .main .noibat .xemthem div a {
+              width: 100%; } }
+          @media only screen and (max-width: 374px) and (min-width: 320px) {
+            .main .noibat .xemthem div a {
+              font-size: 14px; } }
+        .main .noibat .xemthem div i {
+          color: #87f1ef;
+          position: absolute;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+          right: 18%;
+          -webkit-transition: all 0.5s;
+          -o-transition: all 0.5s;
+          transition: all 0.5s; }
+          @media only screen and (max-width: 425px) {
+            .main .noibat .xemthem div i {
+              right: 4%; } }
+        .main .noibat .xemthem div:hover a {
+          background: #000; }
+        .main .noibat .xemthem div:hover i {
+          right: 3%; }
+  .main .xemnhieu, .main .box_truyenngan {
+    background: #fff; }
+    .main .xemnhieu .container, .main .box_truyenngan .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px 0px 60px; }
+      @media only screen and (max-width: 425px) {
+        .main .xemnhieu .container, .main .box_truyenngan .container {
+          padding: 20px 0 30px; } }
+      .main .xemnhieu .container h3, .main .box_truyenngan .container h3 {
+        font: Normal 30px "Pacifico";
+        color: #1a84b4;
+        text-align: center;
+        padding: 0px 0 30px; }
+      .main .xemnhieu .container .item .brd, .main .box_truyenngan .container .item .brd {
+        display: inline-block;
+        padding: 0 10px; }
+        @media only screen and (max-width: 425px) {
+          .main .xemnhieu .container .item .brd, .main .box_truyenngan .container .item .brd {
+            padding: 0 5px; } }
+        .main .xemnhieu .container .item .brd .img, .main .box_truyenngan .container .item .brd .img {
+          overflow: hidden;
+          position: relative; }
+          .main .xemnhieu .container .item .brd .img img, .main .box_truyenngan .container .item .brd .img img {
+            width: 100%;
+            height: 300px;
+            fit-object: cover;
+            -webkit-transition: all 1s;
+            -o-transition: all 1s;
+            transition: all 1s; }
+            @media only screen and (max-width: 1023px) and (min-width: 768px) {
+              .main .xemnhieu .container .item .brd .img img, .main .box_truyenngan .container .item .brd .img img {
+                height: 250px; } }
+            @media only screen and (max-width: 767px) and (min-width: 425px) {
+              .main .xemnhieu .container .item .brd .img img, .main .box_truyenngan .container .item .brd .img img {
+                height: 200px; } }
+            @media only screen and (max-width: 424px) and (min-width: 375px) {
+              .main .xemnhieu .container .item .brd .img img, .main .box_truyenngan .container .item .brd .img img {
+                height: 250px; } }
+            @media only screen and (max-width: 374px) and (min-width: 320px) {
+              .main .xemnhieu .container .item .brd .img img, .main .box_truyenngan .container .item .brd .img img {
+                height: 210px; } }
+          .main .xemnhieu .container .item .brd .img span, .main .box_truyenngan .container .item .brd .img span {
+            display: inline-block;
+            width: 50%;
+            font: Normal 14px "Pacifico";
+            background: #fff;
+            border-radius: 20px;
+            position: absolute;
+            top: 50%;
+            left: -50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+            line-height: 35px;
+            -webkit-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s; }
+            @media only screen and (max-width: 768px) {
+              .main .xemnhieu .container .item .brd .img span, .main .box_truyenngan .container .item .brd .img span {
+                display: none; } }
+        .main .xemnhieu .container .item .brd p.tit, .main .box_truyenngan .container .item .brd p.tit {
+          font: normal 16px "Oswald";
+          text-align: center;
+          color: #1a84b4;
+          padding: 20px 10px 0; }
+          @media only screen and (max-width: 425px) {
+            .main .xemnhieu .container .item .brd p.tit, .main .box_truyenngan .container .item .brd p.tit {
+              font-size: 14px;
+              padding: 5px 5px 0; } }
+      .main .xemnhieu .container .item:hover .img img, .main .box_truyenngan .container .item:hover .img img {
+        -webkit-filter: brightness(40%);
+        filter: brightness(40%);
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2); }
+      .main .xemnhieu .container .item:hover .img span, .main .box_truyenngan .container .item:hover .img span {
+        left: 50%; }
+    .main .xemnhieu .slick-dots, .main .box_truyenngan .slick-dots {
+      bottom: -40px; }
+  @media only screen and (max-width: 425px) {
+    .main .box_truyenngan .container h3 {
+      padding: 0 0 10px; } }
+  .main .box_truyenngan .container .fbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-bettwen;
+    -ms-flex-pack: space-bettwen;
+    justify-content: space-bettwen;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    @media only screen and (max-width: 425px) {
+      .main .box_truyenngan .container .fbox {
+        padding: 0 5px; } }
+    .main .box_truyenngan .container .fbox .item {
+      width: 20%;
+      padding: 0 0 40px; }
+      @media only screen and (max-width: 1023px) and (min-width: 768px) {
+        .main .box_truyenngan .container .fbox .item {
+          width: 25%; } }
+      @media only screen and (max-width: 767px) and (min-width: 425px) {
+        .main .box_truyenngan .container .fbox .item {
+          width: 33.33%;
+          padding: 0 0 10px; } }
+      @media only screen and (max-width: 424px) and (min-width: 375px) {
+        .main .box_truyenngan .container .fbox .item {
+          width: 50%;
+          padding: 0 0 0px; } }
+      @media only screen and (max-width: 374px) and (min-width: 320px) {
+        .main .box_truyenngan .container .fbox .item {
+          width: 50%;
+          padding: 0 0 0px; } }
+      @media only screen and (max-width: 767px) and (min-width: 425px) {
+        .main .box_truyenngan .container .fbox .item .brd .img img {
+          height: 180px; } }
+      @media only screen and (max-width: 424px) and (min-width: 375px) {
+        .main .box_truyenngan .container .fbox .item .brd .img img {
+          height: 240px; } }
+      @media only screen and (max-width: 424px) and (min-width: 375px) {
+        .main .box_truyenngan .container .fbox .item .brd .img img {
+          height: 200px; } }

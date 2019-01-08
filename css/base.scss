@@ -1,0 +1,281 @@
+$maxpc : "only screen and (max-width: 1200px) and (min-width: 1024px)";
+$tab : "only screen and (max-width: 1023px) and (min-width: 768px)";
+$sp1 : "only screen and (max-width: 767px) and (min-width: 425px)";
+$sp2 : "only screen and (max-width: 424px) and (min-width: 375px)";
+$sp3 : "only screen and (max-width: 374px) and (min-width: 320px)";
+$mxtab : "only screen and (max-width: 768px)";
+$mxsp : "only screen and (max-width: 425px)";
+@mixin maxpc() {
+    @media #{$maxpc} {
+        @content;
+    }
+}
+@mixin tab() {
+    @media #{$tab} {
+        @content;
+    }
+}
+@mixin sp1() {
+    @media #{$sp1} {
+        @content;
+    }
+}
+@mixin sp2() {
+    @media #{$sp2} {
+        @content;
+    }
+}
+@mixin sp3() {
+    @media #{$sp3} {
+        @content;
+    }
+}
+@mixin maxtab() {
+    @media #{$mxtab} {
+        @content;
+    }
+}
+@mixin maxsp() {
+    @media #{$mxsp} {
+        @content;
+    }
+}
+.slick-prev, .slick-next{
+	display:none !important;
+}
+*{
+	box-sizing:border-box;
+}
+a:link{
+	text-decoration:none;
+}
+body{
+	background:url("../common_img/bg1.jpg");
+	overflow-x:hidden;
+}
+header{
+	position:relative;
+	width:100%;
+	nav{
+		&.fixed{
+			position:fixed;
+		}
+		position:absolute;
+		width:100%;
+		height:70px;
+		background:#ffffffb5;
+		display:flex;
+		flex-wrap:wrap;
+		justify-content: center;
+		z-index:9999;
+		@include maxtab{
+			justify-content:space-between;
+			padding:0 15px;
+			height:auto;
+			background:#fffffff0;
+		}
+		.logo{
+			max-width:180px;
+			a{
+				img{
+					max-width:100%;
+					height: 70px;;
+					@include maxtab{
+						height:50px;
+					}
+				}
+			}
+		}
+		ul{
+			display:flex;
+			justify-content:space-between;
+			flex-wrap:wrap;
+			@include maxtab{
+				width:100%;
+				padding-top: 20px;;
+				display:none;
+			}
+			li{
+				@include maxtab{
+					width:100%;
+					text-align:right;
+				}
+				a{
+					color:#ab26c1;
+					font-family: 'Oswald', sans-serif;
+					font-size:17px;
+					line-height:70px;
+					display:inline-block;
+					padding:0 40px;
+					transition:all 0.3s;
+					text-transform:uppercase;
+					@include maxtab{
+						line-height:50px;
+						text-align:right;
+						padding:0 0 0 50%;
+					}
+					&:link{
+						text-decoration:none;
+					}
+					&:hover{
+						color:#ed4e75;
+						background:#000000a1;
+					}
+					@include maxpc{
+						padding:0 36px;
+						font-size:15px;
+					}
+					@include tab{
+						font-size:15px;
+					}
+					@include sp2{
+						font-size:14px;
+						line-height:30px;
+					}
+					@include sp3{
+						font-size:14px;
+						line-height:30px;
+					}
+				}
+				
+			}
+		}
+		.btn_sp{
+			display:none;
+			@include maxtab{
+				display:flex;
+				align-items:center;
+				a{
+					display:inline-block;
+				}
+				i{
+					font-size:40px;
+				}
+			}
+			@include sp2{
+				i{
+					font-size:35px;
+				}
+			}
+		}
+		@include maxpc{
+			padding:0 15px;
+		}
+	}
+}
+
+
+
+footer{
+	background:#ffffffad;
+	padding:60px 0 40px;
+	@include maxpc{
+		padding:60px 15px 40px;
+	}
+	@include maxtab{
+		padding:40px 10px 20px;
+	}
+	.container{
+		max-width:1200px;
+		margin:auto;
+		.fbox{
+			display:flex;
+			flex-wrap:wrap;
+			justify-content: space-between;
+			.box1,.box2,.box3{
+				width:31%;
+			}
+			@include maxsp{
+				justify-content:center;
+			}
+			.box1{
+				h1{
+					@include maxsp{
+						text-align:center;
+						padding-bottom:15px;
+					}
+					a{
+						img{
+							max-width:100%;
+						}
+						display:inline-block;
+						width:60%;
+					}
+				}
+				p{
+					font:Normal 13px "Montserrat";
+					line-height:25px;
+					margin:5px 0 0;
+					text-align:justify;
+					@include maxtab{
+						font-size:11px;
+						margin:5px 0 0;
+						line-height:20px;
+					}
+				}
+				@include maxsp{
+					width:70%;
+					padding-bottom:10px;
+					order:1;
+				}
+				@include sp3{
+					width:85%;
+				}
+			}
+			.box2{
+				display:flex;
+				@include maxsp{
+					padding:0 5% 0 0;
+					width:47.5%;
+				}
+				@include sp2{
+					width:70%;
+					padding:5% 0 0;
+					order:3;
+				}
+				@include sp3{
+					width:85%;
+					padding:5% 0 0;
+					order:3;
+				}
+				ul{
+					width:50%;
+					ul{
+						width:100%;
+						padding-left:20px;
+						@include maxtab{
+							padding-left:10px;
+						}
+					}
+					li{
+						a{
+							font:Normal 15px "Roboto";
+							display:inline-block;
+							line-height:30px;
+							&:hover{
+								text-decoration:underline;
+							}
+							@include maxtab{
+								font-size:13px;
+								line-height:20px;
+							}
+						}
+					}
+				}
+			}
+			.box3{
+				@include maxsp{
+					width:47.5%;
+				}
+				@include sp2{
+					width:90%;
+					order:2;
+				}
+				@include sp3{
+					width:90%;
+					order:2;
+				}
+			}
+		}
+	}
+}
