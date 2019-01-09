@@ -1,5 +1,6 @@
 <?php 
-define("baseurl","http://localhost/blog/");
+session_start();
+define("baseurl","http://localhost/story/");
 require "library/function.php";
 require "library/database.php";
 if(isset($_GET["controller"])){

@@ -8,19 +8,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
-        <link rel="stylesheet" href="css/vendor.css">
+        <link rel="stylesheet" href="<?=baseurl?>views/admin/css/vendor.css">
         <!-- Theme initialization -->
         <script>
             var themeSettings = (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) :
             {};
             var themeName = themeSettings.themeName || '';
+            var baseurl = "http://localhost/story/";
             if (themeName)
             {
-                document.write('<link rel="stylesheet" id="theme-style" href="css/app-' + themeName + '.css">');
+                document.write('<link rel="stylesheet" id="theme-style" href="'+baseurl+'views/admin/css/app-' + themeName + '.css">');
             }
             else
             {
-                document.write('<link rel="stylesheet" id="theme-style" href="css/app.css">');
+                document.write('<link rel="stylesheet" id="theme-style" href="'+baseurl+'views/admin/css/app.css">');
             }
         </script>
     </head>
