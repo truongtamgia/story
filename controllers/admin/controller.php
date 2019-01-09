@@ -23,5 +23,5 @@ if(isset($_SESSION["level"])){
 		require "controllers/admin/404.php";
 	}
 }else{
-	require "controllers/admin/404.php";
+	require "controllers/admin/login.php";
 }

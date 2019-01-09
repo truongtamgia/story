@@ -1330,14 +1330,13 @@ $(function () {
 	/************************************************
 	*			Update theme based on options
 	*************************************************/
-
 	function setThemeState() {
 		// set theme type
 		if (themeSettings.themeName) {
-			$styleLink.attr('href', 'css/app-' + themeSettings.themeName + '.css');
+			$styleLink.attr('href','http://localhost/story/views/admin/css/app-' + themeSettings.themeName + '.css');
 		}
 		else {
-			$styleLink.attr('href', 'css/app.css');
+			$styleLink.attr('href','http://localhost/story/views/admin/css/app.css');
 		}
 
 		// App classes

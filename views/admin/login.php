@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
-        <link rel="stylesheet" href="css/vendor.css">
+        <link rel="stylesheet" href="<?=baseurl?>views/admin/css/vendor.css">
         <!-- Theme initialization -->
         <script>
             var themeSettings = (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) :
@@ -16,11 +16,11 @@
             var themeName = themeSettings.themeName || '';
             if (themeName)
             {
-                document.write('<link rel="stylesheet" id="theme-style" href="css/app-' + themeName + '.css">');
+                document.write('<link rel="stylesheet" id="theme-style" href="http://localhost/story/views/admin/css/app-' + themeName + '.css">');
             }
             else
             {
-                document.write('<link rel="stylesheet" id="theme-style" href="css/app.css">');
+                document.write('<link rel="stylesheet" id="theme-style" href="http://localhost/story/views/admin/css/app.css">');
             }
         </script>
     </head>
@@ -36,11 +36,11 @@
                                 <span class="l l3"></span>
                                 <span class="l l4"></span>
                                 <span class="l l5"></span>
-                            </div> ModularAdmin </h1>
+                            </div> Trương Tam Gia </h1>
                     </header>
                     <div class="auth-content">
                         <p class="text-center">LOGIN TO CONTINUE</p>
-                        <form id="login-form" action="/index.html" method="GET" novalidate="">
+                        <form id="login-form" action="index.php?controller=login&action=login" method="post" novalidate="">
                             <div class="form-group">
                                 <label for="username">Username</label>
                                 <input type="email" class="form-control underlined" name="username" id="username" placeholder="Your email address" required> </div>
@@ -55,7 +55,7 @@
                                 <a href="reset.html" class="forgot-btn pull-right">Forgot password?</a>
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn btn-block btn-primary">Login</button>
+                                <button type="submit" class="btn btn-block btn-primary" name="login" value="login">Login</button>
                             </div>
                             <div class="form-group">
                                 <p class="text-muted text-center">Do not have an account?
@@ -79,7 +79,7 @@
                 <div class="color-secondary"></div>
             </div>
         </div>
-        <script src="js/vendor.js"></script>
-        <script src="js/app.js"></script>
+        <!-- <script src="<?=baseurl?>/views/admin/js/vendor.js"></script>
+        <script src="<?=baseurl?>/views/admin/js/app.js"></script> -->
     </body>
 </html>

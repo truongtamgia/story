@@ -8,6 +8,9 @@ if(isset($_GET["controller"])){
         case "admin":
         require "controllers/admin/controller.php"; 
         break;
+        case "login":
+        require "controllers/login/login.php"; 
+        break;
     }
 }else{
 

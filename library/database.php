@@ -42,7 +42,7 @@ class Database{
         return $data;
     }
 }
-
+ 
 class Model extends Database{
     protected $_where;
     protected $_select="*";
@@ -54,7 +54,7 @@ class Model extends Database{
     public function where($where){
         if(is_array($where)){
             foreach($where as $k=>$v){
-                $arr[]="$k '$v'";
+                $arr[]="$k= '$v'";
             }
             $this->_where="where ".implode(" and ",$arr);
         }else{
@@ -108,7 +108,8 @@ class Model extends Database{
         $this->query($sql);
     }
     public function getData($table){
-        $sql="select $this->_select from $table $this->_order $this->_limit";
+        $sql="select $this->_select from $table $this->_where $this->_order $this->_limit";
         $this->query($sql);
     }
+
 }
