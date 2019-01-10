@@ -24,7 +24,7 @@
             }
         </script>
     </head>
-    <body>
+    <body id="p_login">
         <div class="auth">
             <div class="auth-container">
                 <div class="card">
@@ -53,6 +53,15 @@
                                     <span>Remember me</span>
                                 </label>
                                 <a href="reset.html" class="forgot-btn pull-right">Forgot password?</a>
+                            </div>
+                            <div class="err">
+                                <p>
+                                    <?php 
+                                        if($data!=""){
+                                            echo $data["err_login"]; 
+                                        }
+                                    ?>
+                                </p>
                             </div>
                             <div class="form-group">
                                 <button type="submit" class="btn btn-block btn-primary" name="login" value="login">Login</button>

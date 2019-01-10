@@ -3,6 +3,9 @@ if(isset($_SESSION["level"])){
 	if($_SESSION["level"]==1){
 		if(isset($_GET['action'])){
 			switch($_GET['action']){
+				case "index":
+				require "controllers/admin/index.php";
+				break;
 				case "add":
 				require "controllers/admin/add.php";
 				break;

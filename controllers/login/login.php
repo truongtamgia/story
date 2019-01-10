@@ -6,11 +6,14 @@ if(isset($_POST['login'])){
     if($u&&$p){
         $admin= new Model_Login;
         if($admin->checkLogin($u,$p)==FALSE){
-            echo "sai";
+            $data["err_login"] = "Sai tên hoặc mật khẩu";
+            loadview("admin/login",$data);
         }else{
             $row=$admin->getInfo();
-            echo "<pre>";
-            print_r($row);
+            $_SESSION["username"]=$row["username"];
+            $_SESSION["level"]=$row["level"];
+            $_SESSION["fullname"]=$row["fullname"];
+            header("location:".baseurl."index.php?controller=admin&action=index");
         }
     }
 }
