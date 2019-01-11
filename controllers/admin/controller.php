@@ -6,17 +6,26 @@ if(isset($_SESSION["level"])){
 				case "index":
 				require "controllers/admin/index.php";
 				break;
-				case "add":
-				require "controllers/admin/add.php";
+				case "":
+				require "controllers/admin/index.php";
+				break;
+				case "addcate":
+				require "controllers/admin/cate/addcate.php";
 				break;
 				case "edit":
 				require "controllers/admin/edit.php";
 				break;
-				case "del":
-				require "controllers/admin/del.php";
+				case "delcate":
+				require "controllers/admin/cate/del.php";
 				break;
-				case "list":
-				require "controllers/admin/list.php";
+				case "listcate":
+				require "controllers/admin/cate/list.php";
+				break;
+				case "logout":
+				require "controllers/admin/logout.php";
+				break;
+				default:
+				require "controllers/admin/404.php";
 				break;
 			}
 		}else{
@@ -26,5 +35,5 @@ if(isset($_SESSION["level"])){
 		require "controllers/admin/404.php";
 	}
 }else{
-	require "controllers/admin/login.php";
+	require "controllers/login/login.php";
 }

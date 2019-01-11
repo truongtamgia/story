@@ -14,14 +14,13 @@
             var themeSettings = (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) :
             {};
             var themeName = themeSettings.themeName || '';
-            var baseurl = "http://localhost/story/";
             if (themeName)
             {
-                document.write('<link rel="stylesheet" id="theme-style" href="'+baseurl+'views/admin/css/app-' + themeName + '.css">');
+                document.write('<link rel="stylesheet" id="theme-style" href="views/admin/css/app-' + themeName + '.css">');
             }
             else
             {
-                document.write('<link rel="stylesheet" id="theme-style" href="'+baseurl+'views/admin/css/app.css">');
+                document.write('<link rel="stylesheet" id="theme-style" href="views/admin/css/app.css">');
             }
         </script>
     </head>
@@ -114,7 +113,7 @@
                                     <a class="dropdown-item" href="#">
                                         <i class="fa fa-gear icon"></i> Settings </a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="login.html">
+                                    <a class="dropdown-item" href="<?=baseurl?>index.php?controller=admin&action=logout">
                                         <i class="fa fa-power-off icon"></i> Logout </a>
                                 </div>
                             </li>
@@ -141,12 +140,12 @@
                                 </li>
                                 <li>
                                     <a href="">
-                                        <i class="fa fa-th-large"></i> Items Manager
+                                        <i class="fa fa-th-large"></i> Danh mục
                                         <i class="fa arrow"></i>
                                     </a>
                                     <ul class="sidebar-nav">
                                         <li>
-                                            <a href="items-list.html"> Items List </a>
+                                            <a href="items-list.html"> Truyện dài </a>
                                         </li>
                                         <li>
                                             <a href="item-editor.html"> Item Editor </a>
@@ -183,7 +182,7 @@
                                 </li>
                                 <li>
                                     <a href="forms.html">
-                                        <i class="fa fa-pencil-square-o"></i> Forms </a>
+                                        <i class="fa fa-pencil-square-o"></i> Quản lí danh mục </a>
                                 </li>
                             
                                 <li>
@@ -240,51 +239,18 @@
                                 </li>
                                 <li>
                                     <a href="">
-                                        <i class="fa fa-sitemap"></i> Menu Levels
+                                        <i class="fa fa-pencil-square-o"></i> Quản lí danh mục
                                         <i class="fa arrow"></i>
                                     </a>
                                     <ul class="sidebar-nav">
                                         <li>
-                                            <a href="#"> Second Level Item
-                                                <i class="fa arrow"></i>
-                                            </a>
-                                            <ul class="sidebar-nav">
-                                                <li>
-                                                    <a href="#"> Third Level Item </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"> Third Level Item </a>
-                                                </li>
-                                            </ul>
+                                            <a href="<?=baseurl?>index.php?controller=admin&action=listcate"> Thêm danh mục </a>
                                         </li>
                                         <li>
-                                            <a href="#"> Second Level Item </a>
+                                            <a href="<?=baseurl?>index.php?controller=admin&action=addcate"> Thêm danh mục </a>
                                         </li>
                                         <li>
-                                            <a href="#"> Second Level Item
-                                                <i class="fa arrow"></i>
-                                            </a>
-                                            <ul class="sidebar-nav">
-                                                <li>
-                                                    <a href="#"> Third Level Item </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"> Third Level Item </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"> Third Level Item
-                                                        <i class="fa arrow"></i>
-                                                    </a>
-                                                    <ul class="sidebar-nav">
-                                                        <li>
-                                                            <a href="#"> Fourth Level Item </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"> Fourth Level Item </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
+                                            <a href="#"> Chỉnh sửa danh mục </a>
                                         </li>
                                     </ul>
                                 </li>
@@ -401,7 +367,7 @@
                 <div class="sidebar-overlay" id="sidebar-overlay"></div>
                 <div class="sidebar-mobile-menu-handle" id="sidebar-mobile-menu-handle"></div>
                 <div class="mobile-menu-handle"></div>
-                <?php loadview($data['ctpage']); ?>
+                <?php loadview($data['ctpage'],$data); ?>
                 <footer class="footer">
                     <div class="footer-block buttons">
                         <iframe class="footer-github-btn" src="https://ghbtns.com/github-btn.html?user=modularcode&repo=modular-admin-html&type=star&count=true" frameborder="0" scrolling="0" width="140px" height="20px"></iframe>
@@ -498,7 +464,7 @@
                 <div class="color-secondary"></div>
             </div>
         </div>
-        <script src="js/vendor.js"></script>
-        <script src="js/app.js"></script>
+        <script src="<?=baseurl?>views/admin/js/vendor.js"></script>
+        <script src="<?=baseurl?>views/admin/js/app.js"></script>
     </body>
 </html>

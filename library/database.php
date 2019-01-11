@@ -52,15 +52,15 @@ class Model extends Database{
         $this->connect();
     }
     public function where($where){
-        if(is_array($where)){
-            foreach($where as $k=>$v){
-                $arr[]="$k= '$v'";
-            }
-            $this->_where="where ".implode(" and ",$arr);
-        }else{
-            $this->_where="where $where";
-        }
-    }
+		if(is_array($where)){
+			foreach($where as $k=>$v){
+				$arr[]="$k '$v'";
+			}
+			$this->_where="where ".implode(" and ",$arr);
+		}else{
+			$this->_where="where $where";
+		}
+	}
 
     public function select($col){
         if($col!=""){
@@ -95,16 +95,16 @@ class Model extends Database{
             $arr[] = "$k = '$v'";
         }
         $col = implode(",",$arr);
-        $sql = "update $table  set $col where $where";
+        $sql = "update $table set $col $where";
         $this->query($sql);
     }
     public function delete($table){
-        if($this->where()){
+        if($this->_where){
             $where = $this->_where;
         }else{
             $where="";
         }
-        $sql = "delete from $table where $where";
+        $sql = "delete from $table $where";
         $this->query($sql);
     }
     public function getData($table){

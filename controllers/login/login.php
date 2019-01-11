@@ -16,4 +16,6 @@ if(isset($_POST['login'])){
             header("location:".baseurl."index.php?controller=admin&action=index");
         }
     }
+}else{
+    loadview("admin/login");
 }

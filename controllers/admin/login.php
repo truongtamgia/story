@@ -1,2 +1,0 @@
-<?php 
-    loadview("admin/login");
