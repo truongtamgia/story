@@ -135,7 +135,7 @@
                         <nav class="menu">
                             <ul class="sidebar-menu metismenu" id="sidebar-menu">
                                 <li class="active">
-                                    <a href="index.html">
+                                    <a href="<?=baseurl?>index.php?controller=admin">
                                         <i class="fa fa-home"></i> Dashboard </a>
                                 </li>
                                 <li>
@@ -145,7 +145,7 @@
                                     </a>
                                     <ul class="sidebar-nav">
                                         <li>
-                                            <a href="items-list.html"> Truyện dài </a>
+                                            <a href="<?=baseurl?>index.php?controller=admin&action=truyendai"> Truyện dài </a>
                                         </li>
                                         <li>
                                             <a href="item-editor.html"> Item Editor </a>

@@ -27,9 +27,16 @@ if(isset($_SESSION["level"])){
 				case "logout":
 				require "controllers/admin/logout.php";
 				break;
+				case "truyendai":
+				require "controllers/admin/longpost/longpost.php";
+				break;
+				case "themtruyendai":
+				require "controllers/admin/longpost/add.php";
+				break;
 				default:
 				require "controllers/admin/404.php";
 				break;
+				
 			}
 		}else{
 			require "controllers/admin/index.php";
