@@ -2,11 +2,11 @@
 if(isset($_POST["ok"])){
     $name = $_POST["name"];
     if($name){
-        $mcate = new Model_Admin;
-        $data = array(
+        $mcate = new Model_cate;
+        $arr = array(
             "name" => $name
         );
-        $mcate->insertData($data);
+        $mcate->add($arr);
     }
 }
 $data["ctpage"]="admin/content/addcate";

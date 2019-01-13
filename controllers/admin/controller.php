@@ -12,14 +12,17 @@ if(isset($_SESSION["level"])){
 				case "addcate":
 				require "controllers/admin/cate/addcate.php";
 				break;
-				case "edit":
-				require "controllers/admin/edit.php";
+				case "editcate":
+				require "controllers/admin/cate/edit.php";
 				break;
 				case "delcate":
 				require "controllers/admin/cate/del.php";
 				break;
 				case "listcate":
 				require "controllers/admin/cate/list.php";
+				break;
+				case "list":
+				require "controllers/admin/list.php";
 				break;
 				case "logout":
 				require "controllers/admin/logout.php";

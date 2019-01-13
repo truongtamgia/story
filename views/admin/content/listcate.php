@@ -7,9 +7,6 @@
                             <div class="col-md-6">
                                 <div class="card">
                                     <div class="card-block">
-                                        <div class="card-title-block">
-                                            <h3 class="title"> Striped rows </h3>
-                                        </div>
                                         <section class="example">
                                             <table class="table table-striped">
                                                 <thead>
@@ -25,7 +22,7 @@
                                                     <tr>
                                                         <th scope="row"><?=$item["id"]?></th>
                                                         <td><?=$item["name"]?></td>
-                                                        <td><a href="<?=baseurl?>index.php?controller=admin&action=editcate">
+                                                        <td><a href="<?=baseurl?>index.php?controller=admin&action=editcate&id=<?=$item["id"]?>">
                                                             <em class="fa fa-certificate"></em>
                                                         </a></td>
                                                         <td><a href="<?=baseurl?>index.php?controller=admin&action=delcate&id=<?=$item["id"]?>">

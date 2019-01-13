@@ -244,13 +244,10 @@
                                     </a>
                                     <ul class="sidebar-nav">
                                         <li>
-                                            <a href="<?=baseurl?>index.php?controller=admin&action=listcate"> Thêm danh mục </a>
+                                            <a href="<?=baseurl?>index.php?controller=admin&action=listcate"> Danh sách </a>
                                         </li>
                                         <li>
                                             <a href="<?=baseurl?>index.php?controller=admin&action=addcate"> Thêm danh mục </a>
-                                        </li>
-                                        <li>
-                                            <a href="#"> Chỉnh sửa danh mục </a>
                                         </li>
                                     </ul>
                                 </li>

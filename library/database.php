@@ -54,7 +54,7 @@ class Model extends Database{
     public function where($where){
 		if(is_array($where)){
 			foreach($where as $k=>$v){
-				$arr[]="$k '$v'";
+				$arr[]="$k='$v'";
 			}
 			$this->_where="where ".implode(" and ",$arr);
 		}else{
@@ -79,14 +79,15 @@ class Model extends Database{
         $col=implode(",",array_keys($data));
         $newarr = array_values($data);
         foreach($newarr as $val){
-            $arr[]="'$val";
+            $arr[]="'$val'";
         }
         $value = implode(",",$arr);
-        $sql="insert into $table($col) values($value)";
+        $sql="insert into $table ($col) VALUES ($value)";
+        // echo $sql;
         $this->query($sql);
     }
     public function update($table,$data){
-        if($this->where()){
+        if($this->_where){
             $where = $this->_where;
         }else{
             $where="";
@@ -97,6 +98,7 @@ class Model extends Database{
         $col = implode(",",$arr);
         $sql = "update $table set $col $where";
         $this->query($sql);
+        echo $sql;
     }
     public function delete($table){
         if($this->_where){
@@ -111,5 +113,11 @@ class Model extends Database{
         $sql="select $this->_select from $table $this->_where $this->_order $this->_limit";
         $this->query($sql);
     }
-
 }
+    // $muser = new Model;
+    // $muser->where($where="id='1'");
+    // $table="okok";
+    // $data = array(
+    //     "name"=>"abd"
+    // );
+    // $muser->update($table,$data);

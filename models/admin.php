@@ -1,6 +1,6 @@
 <?php
 class Model_Admin extends Model{
-    protected $_table="admin";
+    protected $_table="danhmuc";
     public function listAll(){
         $this->getData($this->_table);
         return $this->fetchAll();
