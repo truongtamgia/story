@@ -16815,5 +16815,7 @@ a.text-dark:hover, a.text-dark:focus {
   color:#ff0000;
   text-align: center;
 }
-
+#addlpost textarea{
+  width:100%;
+}
 /*# sourceMappingURL=bootstrap.css.map */

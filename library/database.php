@@ -48,6 +48,7 @@ class Model extends Database{
     protected $_select="*";
     protected $_order;
     protected $_limit;
+
     public function __construct(){
         $this->connect();
     }
