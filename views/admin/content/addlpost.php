@@ -4,8 +4,15 @@
                             <span class="sparkline bar" data-type="bar"></span>
                         </h3>
                     </div>
-                    <form name="item" method='post' action="<?=baseurl?>" enctype="multipart/form-data">
+                    <form name="item" method='post' action="<?=baseurl?>index.php?controller=admin&action=themtruyendai" enctype="multipart/form-data">
                         <div class="card card-block">
+                            <?php if(isset($data['error'])){
+                                   foreach($data['error'] as $loi){    
+                                ?>
+                                <div class="form-group row">
+                                    <p class="text-danger col-sm-12 form-control-label text-xs-right"><?=$loi?></p>
+                                </div>
+                            <?php }}?>
                             <div class="form-group row">
                                 <label class="col-sm-2 form-control-label text-xs-right"> Tên truyện: </label>
                                 <div class="col-sm-10">
@@ -25,7 +32,7 @@
                             <div class="form-group row">
                                 <label class="col-sm-2 form-control-label text-xs-right"> Category: </label>
                                 <div class="col-sm-10">
-                                    <select class="c-select form-control boxed">
+                                    <select class="c-select form-control boxed" name="category">
                                         <?php foreach($data['cate'] as $item){?>
                                         <option value="<?=$item['id']?>"><?=$item['name']?></option>
                                         <?php }?>
@@ -40,9 +47,10 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-10 col-sm-offset-2">
-                                    <button type="submit" class="btn btn-primary"> Thêm </button>
+                                    <button type="submit" class="btn btn-primary" name="ok"> Thêm </button>
                                 </div>
                             </div>
+                            
                         </div>
                     </form>
                 </article>
