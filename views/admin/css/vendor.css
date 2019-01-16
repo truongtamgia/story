@@ -16818,4 +16818,7 @@ a.text-dark:hover, a.text-dark:focus {
 #addlpost textarea{
   width:100%;
 }
+footer{
+  z-index:9999;
+}
 /*# sourceMappingURL=bootstrap.css.map */

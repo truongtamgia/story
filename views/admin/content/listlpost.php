@@ -38,12 +38,6 @@
                         <ul class="item-list striped">
                             <li class="item item-list-header">
                                 <div class="item-row">
-                                    <div class="item-col fixed item-col-check">
-                                        <label class="item-check" id="select-all-items">
-                                            <input type="checkbox" class="checkbox">
-                                            <span></span>
-                                        </label>
-                                    </div>
                                     <div class="item-col item-col-header fixed item-col-img md">
                                         <div>
                                             <span>Ảnh bìa</span>
@@ -78,24 +72,19 @@
                                     <div class="item-col item-col-header fixed item-col-actions-dropdown"> </div>
                                 </div>
                             </li>
+                            <?php foreach($data['post'] as $item){?>
                             <li class="item">
                                 <div class="item-row">
-                                    <div class="item-col fixed item-col-check">
-                                        <label class="item-check" id="select-all-items">
-                                            <input type="checkbox" class="checkbox">
-                                            <span></span>
-                                        </label>
-                                    </div>
                                     <div class="item-col fixed item-col-img md">
                                         <a href="item-editor.html">
-                                            <div class="item-img rounded" style="background-image: url(https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg)"></div>
+                                            <div class="item-img rounded" style="background-image: url(<?=baseurl?>upload/story/truyendai/<?=$item['image']?>)"></div>
                                         </a>
                                     </div>
                                     <div class="item-col fixed pull-left item-col-title">
                                         <div class="item-heading">Name</div>
                                         <div>
                                             <a href="item-editor.html" class="">
-                                                <h4 class="item-title"> 12 Myths Uncovered About IT &amp; Software </h4>
+                                                <h4 class="item-title"><?=$item['ten']?></h4>
                                             </a>
                                         </div>
                                     </div>
@@ -106,18 +95,18 @@
                                     <div class="item-col item-col-category no-overflow">
                                         <div class="item-heading">Category</div>
                                         <div class="no-overflow">
-                                            <a href="">Software</a>
+                                            <a href=""><?=$item['name']?></a>
                                         </div>
                                     </div>
                                     <div class="item-col item-col-author">
                                         <div class="item-heading">Author</div>
                                         <div class="no-overflow">
-                                            <a href="">Meadow Katheryne</a>
+                                            <a href=""><?=$item['nguoidang']?></a>
                                         </div>
                                     </div>
                                     <div class="item-col item-col-date">
                                         <div class="item-heading">Published</div>
-                                        <div class="no-overflow"> 21 SEP 10:45 </div>
+                                        <div class="no-overflow"> <?=$item['ngaydang']?> </div>
                                     </div>
                                     <div class="item-col fixed item-col-actions-dropdown">
                                         <div class="item-actions-dropdown">
@@ -147,6 +136,7 @@
                                     </div>
                                 </div>
                             </li>
+                            <?php }?>
                         </ul>
                     </div>
                     <nav class="text-right">
