@@ -72,7 +72,7 @@
                                     <div class="item-col item-col-header fixed item-col-actions-dropdown"> </div>
                                 </div>
                             </li>
-                            <?php foreach($data['post'] as $item){?>
+                            <?php foreach($data['post']['fetch'] as $item){?>
                             <li class="item">
                                 <div class="item-row">
                                     <div class="item-col fixed item-col-img md">
