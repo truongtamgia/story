@@ -141,27 +141,27 @@
                     </div>
                     <nav class="text-right">
                         <ul class="pagination">
+                            <?php if(isset($_GET['page'])&&$_GET['page']>1){ ?>
                             <li class="page-item">
-                                <a class="page-link" href=""> Prev </a>
+                                <a class="page-link" href="<?=baseurl?>index.php?controller=admin&action=truyendai&page=<?php echo $_GET['page']-1;?>"> Prev </a>
                             </li>
-                            <li class="page-item active">
-                                <a class="page-link" href=""> 1 </a>
-                            </li>
+                            <?php }?>
                             <li class="page-item">
-                                <a class="page-link" href=""> 2 </a>
+                                <a class="page-link" href="index.php?controller=admin&action=truyendai&page=1"> Trang đầu </a>
                             </li>
+                            <?php for($i=$data['min'];$i<=$data['max'];$i++){?>
+                            <li class="page-item <?php if($_GET['page']==$i){echo 'active';}?>">
+                                <a class="page-link" href="<?=baseurl?>index.php?controller=admin&action=truyendai&page=<?=$i?>"> <?=$i?> </a>
+                            </li>
+                            <?php }?>
                             <li class="page-item">
-                                <a class="page-link" href=""> 3 </a>
+                                <a class="page-link" href="index.php?controller=admin&action=truyendai&page=<?=$data['post']['sotrang']?>"> Trang cuối </a>
                             </li>
+                            <?php if($_GET['page']<$data['post']['sotrang']){ ?>
                             <li class="page-item">
-                                <a class="page-link" href=""> 4 </a>
+                                <a class="page-link" href="<?=baseurl?>index.php?controller=admin&action=truyendai&page=<?php echo $_GET['page']+1;?>"> Next </a>
                             </li>
-                            <li class="page-item">
-                                <a class="page-link" href=""> 5 </a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href=""> Next </a>
-                            </li>
+                            <?php }?>
                         </ul>
                     </nav>
                 </article>
