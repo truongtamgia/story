@@ -6,8 +6,11 @@ function __autoload($url){
     $url = str_replace("helper","helpers",$url);
     require "$url.php";
 }
-function loadview($name,$data=""){
+function loadview($name,$data="",$curent=""){
     require "views/$name.php";
+}
+function loadviewtpl($name,$data="",$curent=""){
+    require "views/$name.php$curent";
 }
 
 function redirect($url){

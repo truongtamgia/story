@@ -5,7 +5,7 @@ class Model_Longpost extends Model{
         $sql="select * from truyendai inner join danhmuc on truyendai.id_cat=danhmuc.id";
         $this->query($sql);
         $sopost=$this->num_rows();
-        $tongpage=round($sopost/$record);
+        $tongpage=ceil($sopost/$record);
         if($trang > $tongpage){
             $start='0';
         }else{
@@ -19,5 +19,18 @@ class Model_Longpost extends Model{
     }
     public function insertlp($data){
         $this->insert($this->_table,$data);
+    }
+    public function dellpost($id){
+        $this->where($where="id_truyendai='$id'");
+        $this->delete($this->_table);
+    }
+    public function dataedit($id){
+       $this->where($where="id_truyendai='$id'");
+       $this->getData($this->_table);
+       return $data[]=$this->fetch();
+    }
+    public function edit($data,$id){
+        $this->where($where="id_truyendai='$id'");
+        $this->update($this->_table,$data);
     }
 }

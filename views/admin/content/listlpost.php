@@ -106,7 +106,7 @@
                                     </div>
                                     <div class="item-col item-col-date">
                                         <div class="item-heading">Published</div>
-                                        <div class="no-overflow"> <?=$item['ngaydang']?> </div>
+                                        <div class="no-overflow"> <?=date("d-m-Y",strtotime($item['ngaydang']))?> </div>
                                     </div>
                                     <div class="item-col fixed item-col-actions-dropdown">
                                         <div class="item-actions-dropdown">
@@ -121,12 +121,12 @@
                                             <div class="item-actions-block">
                                                 <ul class="item-actions-list">
                                                     <li>
-                                                        <a class="remove" href="#" data-toggle="modal" data-target="#confirm-modal">
+                                                        <a class="remove" href="<?=baseurl?>index.php?controller=admin&action=xoatruyendai&page=<?php if(isset($_GET['page']))echo $_GET['page'];?>&id=<?=$item['id_truyendai']?>">
                                                             <i class="fa fa-trash-o "></i>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a class="edit" href="item-editor.html">
+                                                        <a class="edit" href="<?=baseurl?>index.php?controller=admin&action=suatruyendai&page=<?php if(isset($_GET['page']))echo $_GET['page'];?>&id=<?=$item['id_truyendai']?>">
                                                             <i class="fa fa-pencil"></i>
                                                         </a>
                                                     </li>
@@ -150,14 +150,19 @@
                                 <a class="page-link" href="index.php?controller=admin&action=truyendai&page=1"> Trang đầu </a>
                             </li>
                             <?php for($i=$data['min'];$i<=$data['max'];$i++){?>
-                            <li class="page-item <?php if($_GET['page']==$i){echo 'active';}?>">
+                            <li class="page-item <?php if(isset($_GET['page'])&&$_GET['page']==$i){echo 'active';}?>">
                                 <a class="page-link" href="<?=baseurl?>index.php?controller=admin&action=truyendai&page=<?=$i?>"> <?=$i?> </a>
                             </li>
                             <?php }?>
                             <li class="page-item">
                                 <a class="page-link" href="index.php?controller=admin&action=truyendai&page=<?=$data['post']['sotrang']?>"> Trang cuối </a>
                             </li>
-                            <?php if($_GET['page']<$data['post']['sotrang']){ ?>
+                            <?php if(isset($_GET['page'])){
+                                if($_GET['page']<$data['post']['sotrang']){?>
+                            <li class="page-item">
+                                <a class="page-link" href="<?=baseurl?>index.php?controller=admin&action=truyendai&page=<?php echo $_GET['page']+1;?>"> Next </a>
+                            </li>
+                                <?php }}else{ ?>
                             <li class="page-item">
                                 <a class="page-link" href="<?=baseurl?>index.php?controller=admin&action=truyendai&page=<?php echo $_GET['page']+1;?>"> Next </a>
                             </li>

@@ -33,6 +33,12 @@ if(isset($_SESSION["level"])){
 				case "themtruyendai":
 				require "controllers/admin/longpost/add.php";
 				break;
+				case "xoatruyendai":
+				require "controllers/admin/longpost/del.php";
+				break;
+				case "suatruyendai":
+				require "controllers/admin/longpost/edit.php";
+				break;
 				default:
 				require "controllers/admin/404.php";
 				break;

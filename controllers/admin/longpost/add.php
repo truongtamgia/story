@@ -11,13 +11,13 @@
             if($_FILES['biasach']['error']>0){
                 $data['error'][]="upload ảnh lỗi";
             }else{
-                $anhbia=time().$_FILES['biasach']['name'];
+                $anhbia=time()."--".$_FILES['biasach']['name'];
             }
         }else{
             $data['error'][]="Cần thêm ảnh bìa khi đăng";
         }
         if($name&&$tacgia&&$mota&&$cate&&$anhbia){
-            $time=date('d/m/y');
+            $time=date('y/m/d');
             $data=array(
                 "ten"=>$name,
                 "mota"=>$mota,
