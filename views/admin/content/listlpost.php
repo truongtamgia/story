@@ -76,14 +76,14 @@
                             <li class="item">
                                 <div class="item-row">
                                     <div class="item-col fixed item-col-img md">
-                                        <a href="item-editor.html">
+                                        <a href="<?=baseurl?>index.php?controller=admin&action=listchapter&id=<?=$item['id_truyendai']?>">
                                             <div class="item-img rounded" style="background-image: url(<?=baseurl?>upload/story/truyendai/<?=$item['image']?>)"></div>
                                         </a>
                                     </div>
                                     <div class="item-col fixed pull-left item-col-title">
                                         <div class="item-heading">Name</div>
                                         <div>
-                                            <a href="item-editor.html" class="">
+                                            <a href="<?=baseurl?>index.php?controller=admin&action=listchapter&id=<?=$item['id_truyendai']?>" class="">
                                                 <h4 class="item-title"><?=$item['ten']?></h4>
                                             </a>
                                         </div>

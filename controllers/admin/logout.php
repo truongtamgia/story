@@ -1,3 +1,3 @@
 <?php
     session_destroy();
-    header("location:".baseurl."index.php?controller=login&action=login");
+    redirect(baseurl."index.php?controller=login&action=login");

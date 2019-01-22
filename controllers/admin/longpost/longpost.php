@@ -9,8 +9,6 @@ if(isset($_GET['page'])){
 }else{
     $trang=1;
 }
-$data['next']=$trang+1;
-$data['prev']=$trang+1;
 $record='5';
 $muser = new Model_Longpost;
 $data['post']=$muser->listAll($trang,$record);

@@ -39,10 +39,15 @@ if(isset($_SESSION["level"])){
 				case "suatruyendai":
 				require "controllers/admin/longpost/edit.php";
 				break;
+				case "listchapter":
+				require "controllers/admin/longpost/listchapter.php";
+				break;
+				case "addchapter":
+				require "controllers/admin/longpost/addchapter.php";
+				break;
 				default:
 				require "controllers/admin/404.php";
 				break;
-				
 			}
 		}else{
 			require "controllers/admin/index.php";
