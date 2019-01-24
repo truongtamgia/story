@@ -16821,4 +16821,14 @@ a.text-dark:hover, a.text-dark:focus {
 footer{
   z-index:9999;
 }
+#p_listchapter table tr ul li{
+  list-style-type: none;
+  display: inline-block;
+  padding:0 10%;
+}
+#p_listchapter table tr ul{
+  padding-left:0;
+  display: flex;
+  justify-content: space-between;
+}
 /*# sourceMappingURL=bootstrap.css.map */

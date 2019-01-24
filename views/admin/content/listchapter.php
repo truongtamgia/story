@@ -1,30 +1,63 @@
-<article class="content item-editor-page">
+<article class="content responsive-tables-page" id="p_listchapter">
     <div class="title-block">
-        <h3 class="title"> Danh sách tập
-            <span class="sparkline bar" data-type="bar"></span>
-        </h3>
+        <h1 class="title"> Danh sách tập truyện <a href="<?=baseurl?>index.php?controller=admin&action=addchapter&id=<?=$_GET['id']?>&tap=<?=$data['lastchap']?>" class="btn btn-primary btn-sm">Primary</a> </h1>
     </div>
-    <form name="item" method="post" action="<?=baseurl?>index.php?controller=admin&action=addcate">
-        <div class="card card-block">
-            <div class="form-group row">
-                <div class="col-sm-12">
-                    <p>Số tập hiện tại:</p>
-                    <pre>
-                        <?php print_r($data);?>
-                    </pre>
-                </div>
-            </div>
-            <div class="form-group row">
-                <label class="col-sm-3 form-control-label text-xs-right"> Tên danh mục: </label>
-                <div class="col-sm-9">
-                    <input type="text" class="form-control boxed" placeholder="" name="name">
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-sm-9 col-sm-offset-3">
-                    <button type="submit" class="btn btn-primary" name="ok"> Thêm </button>
+    <section class="section">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-block">
+                        <div class="card-title-block">
+                            <h3 class="title"> <?=$data['post'][0]['ten']?> </h3>
+                        </div>
+                        <section class="example">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>Số tập</th>
+                                        <th>Người đăng truyện</th>
+                                        <th>Ngày đăng tập</th>
+                                        <th>Người đăng tập</th>
+                                        <th>Lần sửa chữa cuối cùng</th>
+                                        <th>Tác vụ</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php foreach($data['post'] as $item){?>
+                                        <tr>
+                                            <th scope="row"><?=$item['ps_tentap']?></th>
+                                            <td><?=$item['nguoidang']?></td>
+                                            <td><?=$item['ps_ngaydang']?></td>
+                                            <td><?=$item['ps_nguoidang']?></td>
+                                            <?php if($item['ps_lastedit']!=""){?>
+                                            <td><?=$item['ps_lastedit']?></td>
+                                            <?php }else{ ?>
+                                            <td>Chưa</td>
+                                            <?php } ?>
+                                            <td>
+                                                <ul class="">
+                                                    <li>
+                                                        <a class="remove" href="">
+                                                            <i class="fa fa-trash-o "></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="edit" href="">
+                                                            <i class="fa fa-pencil"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <?php }?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                    </div>
                 </div>
             </div>
         </div>
-    </form>
+    </section>
 </article>
