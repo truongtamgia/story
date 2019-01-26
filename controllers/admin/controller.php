@@ -45,6 +45,9 @@ if(isset($_SESSION["level"])){
 				case "addchapter":
 				require "controllers/admin/longpost/addchapter.php";
 				break;
+				case "editchapter":
+				require "controllers/admin/longpost/editchapter.php";
+				break;
 				default:
 				require "controllers/admin/404.php";
 				break;

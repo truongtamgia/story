@@ -48,4 +48,9 @@ class Model_Longpost extends Model{
         $this->query($sql);
         return $data=$this->fetch();
     }
+    public function lay1truyen($id){
+        $this->where($where="id_truyendai='$id'");
+        $this->getData($this->_table);
+        return $data=$this->fetch();
+    }
 }

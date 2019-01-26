@@ -1,6 +1,6 @@
 <article class="content responsive-tables-page" id="p_listchapter">
     <div class="title-block">
-        <h1 class="title"> Danh sách tập truyện <a href="<?=baseurl?>index.php?controller=admin&action=addchapter&id=<?=$_GET['id']?>&tap=<?=$data['lastchap']?>" class="btn btn-primary btn-sm">Primary</a> </h1>
+        <h1 class="title"> Danh sách tập truyện <a href="<?=baseurl?>index.php?controller=admin&action=addchapter&id=<?=$_GET['id']?>&tap=<?=$data['lastchap']?>" class="btn btn-primary btn-sm">Thêm tập</a> </h1>
     </div>
     <section class="section">
         <div class="row">
@@ -43,7 +43,7 @@
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a class="edit" href="">
+                                                        <a class="edit" href="<?=baseurl?>index.php?controller=admin&action=editchapter&id=<?=$item['postid']?>">
                                                             <i class="fa fa-pencil"></i>
                                                         </a>
                                                     </li>

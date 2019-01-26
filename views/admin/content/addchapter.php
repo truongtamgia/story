@@ -4,20 +4,25 @@
             <span class="sparkline bar" data-type="bar"></span>
         </h3>
     </div>
-    <form name="item" method="post" action="<?=baseurl?>index.php?controller=admin&action=addcate">
+    <form name="item" method="post" action="<?=baseurl?>index.php?controller=admin&action=addchapter">
         <div class="card card-block">
             <div class="form-group row">
-                <div class="col-sm-12">
-                    <p>Số tập hiện tại:</p>
-                    <pre>
-                        <?php print_r($data);?>
-                    </pre>
+                <label class="control-label col-sm-10"><?=$data['cat']['ten']?></label>
+                <div class="col-sm-2">
+                    <input type="text" readonly="readonly" class="form-control boxed" value="<?=$data['cat']['id_truyendai']?>" name="id_td"> 
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-sm-3 form-control-label text-xs-right"> Tên danh mục: </label>
-                <div class="col-sm-9">
-                    <input type="text" class="form-control boxed" placeholder="" name="name">
+                <label class="control-label col-sm-10">Tập</label>
+                <div class="col-sm-2">
+                    <input type="text" readonly="readonly" class="form-control boxed" value="<?=$_GET['tap']?>" name="tap"> 
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-12 form-control-label text-xs-right"> Nội dung: </label>
+                <div class="col-sm-12">
+                    <textarea name="noidung" id="noidung" require="on"></textarea>
+                    <script>CKEDITOR.replace( 'noidung' );</script>
                 </div>
             </div>
             <div class="form-group row">
