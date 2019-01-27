@@ -9,4 +9,8 @@ class Model_Post extends Model{
         $this->getData($this->_table);
         return $this->fetch();
     }
+    public function editchapter($id,$data){
+        $this->where($where="postid='$id'");
+        $this->update($this->_table,$data);
+    }
 }

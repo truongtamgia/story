@@ -464,5 +464,7 @@
         </div>
         <script src="<?=baseurl?>views/admin/js/vendor.js"></script>
         <script src="<?=baseurl?>views/admin/js/app.js"></script>
+        <script src="<?=baseurl?>js/jquery.min.js"></script>
+        <script src="<?=baseurl?>views/admin/js/custom.js"></script>
     </body>
 </html>

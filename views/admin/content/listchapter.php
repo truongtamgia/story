@@ -43,7 +43,7 @@
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a class="edit" href="<?=baseurl?>index.php?controller=admin&action=editchapter&id=<?=$item['postid']?>">
+                                                        <a class="edit" href="<?=baseurl?>index.php?controller=admin&action=editchapter&id=<?=$item['postid']?>&idtd=<?=$_GET['id']?>">
                                                             <i class="fa fa-pencil"></i>
                                                         </a>
                                                     </li>
